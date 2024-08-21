@@ -12,7 +12,9 @@
       @apply  border-2 border-gray-400 mt-5 font-bold py-2 px-4 rounded
     }
 }
- 
+ html{
+  scroll-padding: 80px;
+ }
 body{
     font-family: "Edu AU VIC WA NT Hand", cursive;
 }

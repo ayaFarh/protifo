@@ -31,13 +31,13 @@ export default function Navbar() {
         <li className='p-3 px-8' ><a href="/"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300 dark:before:bg-black
           ${isActive ? 'font-bold before:w-full  dark:before:bg-black' :""}`}}>Home</a></li>
-        <li className='p-3 px-8' ><a href="Aboute"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
+        <li className='p-3 px-8' ><a href="#Aboute"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300 dark:before:bg-black
           ${isActive ? 'font-bold before:w-full dark:before:bg-black' :""}`}}>Aboute</a></li>
-        <li className='p-3 px-8' ><a href="Projects" className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
+        <li className='p-3 px-8' ><a href="#Projects" className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300 dark:before:bg-black
           ${isActive ? 'font-bold before:w-full dark:before:bg-black' :""}`}}>Projects</a></li>
-        <li className='p-3 px-8' ><a href="Contact" className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
+        <li className='p-3 px-8' ><a href="#Contact" className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300 dark:before:bg-black
           ${isActive ? 'font-bold before:w-full dark:before:bg-black' :""}`}}>Contact</a></li>
 

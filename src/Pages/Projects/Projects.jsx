@@ -1,6 +1,17 @@
 import React from 'react'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import freshcart from  "../../assets/freshcart.png"
+import foodapp from  "../../assets/meals.png"
+import melafy from "../../assets/melafy.png"
+import mentor from "../../assets/menator.png"
+import popit from "../../assets/popit.png"
+import todo  from "../../assets/to-do-ist.png"
+import weather  from "../../assets/weather.png"
+import contact  from "../../assets/contact list.png"
+import bookmark  from "../../assets/bookmark.png"
+
+
 
 export default function Projects() {
     Aos.init()
@@ -16,7 +27,7 @@ export default function Projects() {
   
       <div className='grid  grid-cols-12 gap-5'  data-aos="fade-down-right">
       <div  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3  border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry' >
-          <img src="./public/freshcart.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={freshcart} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Freshcart</h3>
          <a href="https://ayafarh.github.io/Freshcart/" className='btn-primary mt-10 d-block hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -24,7 +35,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'  >
-          <img src="./public/meals.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={foodapp} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Meals</h3>
          <a href="https://ayafarh.github.io/meals-project/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -32,7 +43,7 @@ export default function Projects() {
         </div>
    
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'  >
-          <img src="./public/melafy.png" alt=""  className='w-full h-[200px] object-fill '/>
+          <img src={melafy} alt=""  className='w-full h-[200px] object-fill '/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Mealify</h3>
          <a href="https://ayafarh.github.io/mealify/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -40,7 +51,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/menator.png" alt=""  className='w-full h-[200px] object-fill '/>
+          <img src={mentor} alt=""  className='w-full h-[200px] object-fill '/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Menator</h3>
          <a href="https://ayafarh.github.io/my-mentors/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -49,7 +60,7 @@ export default function Projects() {
        
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/popit.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={popit} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Popuit</h3>
          <a href="https://ayafarh.github.io/popit/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -57,7 +68,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/to-do-ist.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={todo} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>To do list</h3>
          <a href="https://ayafarh.github.io/to-do-list/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -65,7 +76,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/weather.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={weather} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Weather</h3>
          <a href="https://ayafarh.github.io/weather/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -73,7 +84,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/bookmark.png" alt=""  className='w-full h-[200px] object-fill'/>
+          <img src={bookmark} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Bookmark</h3>
          <a href="https://ayafarh.github.io/book-mark/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
@@ -81,7 +92,7 @@ export default function Projects() {
         </div>
   
         <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'>
-          <img src="./public/contact list.png" alt=""  className='w-full h-[200px] object-fill'/>
+        <img src={contact} alt=""  className='w-full h-[200px] object-fill'/>
          <div className='p-5 flex flex-col justify-center'>
          <h3>Contact list</h3>
          <a href="https://ayafarh.github.io/contact-list/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>

@@ -17,7 +17,7 @@ export default function Projects() {
     Aos.init()
   
     return<>
-     <section className= "dark:bg-gray-900 dark:text-white bg-[url('./public/light-patten.svg')] bg-cover py-20 text-center " id='Projects'>
+     <section className= "dark:bg-gray-900 dark:text-white py-20 text-center " id='Projects'>
   
      <div className='container'>
      <div   data-aos-easing="linear" data-aos-duration="1400" data-aos="fade-down">

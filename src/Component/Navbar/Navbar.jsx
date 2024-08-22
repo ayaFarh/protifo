@@ -28,7 +28,7 @@ export default function Navbar() {
   <i className="fa-solid fa-bars py-2 px-3 text-3xl  rounded-lg text-black cursor-pointer md:opacity-0 opacity-1 "   aria-label="Toggle Menu" onClick={toggleVisable}> </i>
   </div>
    {isVisable && ( <ul className='md:flex block  items-center justify-center p-1'  onClick={toggleClass}>
-        <li className='p-3 px-8' ><a href="/"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
+        <li className='p-3 px-8' ><a href="#home"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300 dark:before:bg-black
           ${isActive ? 'font-bold before:w-full  dark:before:bg-black' :""}`}}>Home</a></li>
         <li className='p-3 px-8' ><a href="#Aboute"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]

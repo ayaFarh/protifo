@@ -1,6 +1,16 @@
 import React from 'react'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import mesamico from "../../assets/messy bun-amico.svg"
+import html from "../../assets/html.jpg"
+import css from "../../assets/css.webp"
+import javascript from "../../assets/javaseript.webp"
+import react from "../../assets/react.svg"
+import bootstrap from "../../assets/bootstrap.png"
+import tailwind from "../../assets/tailwind.webp"
+import sass from "../../assets/sass.png"
+import jquary from "../../assets/jquary.png"
+import git from "../../assets/github.png"
 
 export default function Aboute(){
         Aos.init()
@@ -11,7 +21,7 @@ export default function Aboute(){
         <div className='' data-aos="fade-down">
           <div  className='grid  grid-cols-12 gap-5'>
           <div className='col-span-12 md:col-span-5 lg:col-span-5 xl:col-span-5' data-aos="fade-right">
-            <img src='./public/messy bun-amico.svg' className="rounded-xl w-[90%]" />
+            <img src={mesamico} className="rounded-xl w-[90%]" />
           </div>
       <div className='col-span-12 md:col-span-7 lg:col-span-7 xl:col-span-7 flex flex-col justify-center align-center border border-[7px] border-secondry rounded-bl-[90px] px-10 py-5 rounded-tr-[90px] px-5 shadow-2xl dark:border-darksecondry' data-aos="fade-left">
       <h3 className='text-3xl text-bold text-center mb-10 dark:text-darkprimary'>About Me</h3>
@@ -32,27 +42,27 @@ export default function Aboute(){
           <div className='grid grid-cols-12 gap-5 ' data-aos="fade-down">
             <div className='col-span-6 md:col-span-3   flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public/html.jpg' className='w-20 h-[70px] object-cover' />
+              <img src={html} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>HTML & HTML5</p>
             </div>
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\css.webp' className='w-20 h-[70px] object-cover' />
+              <img src={css} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>CSS</p>
             </div>
       
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\javaseript.webp' className='w-20 h-[70px] object-cover' />
+              <img src={javascript} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>JavaScript</p>
             </div>
       
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\bootstrap.webp' className='w-20 h-[70px] object-cover' />
+              <img src={bootstrap} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>Bootstrap</p>
             </div>
@@ -60,7 +70,7 @@ export default function Aboute(){
       
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\tailwind.webp' className='w-20 h-[70px] object-cover' />
+              <img src={tailwind} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>Tailwind</p>
             </div>
@@ -68,7 +78,7 @@ export default function Aboute(){
        
             <div className='col-span-6 md:col-span-3 flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\sass.png' className='w-20 h-[70px] object-cover' />
+              <img src={sass} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>Sass</p>
             </div>
@@ -76,7 +86,7 @@ export default function Aboute(){
       
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\jquary.png' className='w-20 h-[70px] object-cover' />
+              <img src={jquary} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>jquary</p>
             </div>
@@ -84,7 +94,7 @@ export default function Aboute(){
       
             <div className='col-span-6 md:col-span-3 flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\react js.png' className='w-20 h-[70px] object-cover' />
+              <img src={react} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>React js</p>
             </div>
@@ -92,7 +102,7 @@ export default function Aboute(){
       
             <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
             <div className='rounded-full overflow-hidden'>
-              <img src='./public\github.png' className='w-20 h-[70px] object-cover' />
+              <img src={git} className='w-20 h-[70px] object-cover' />
             </div>
              <p className=' mt-5'>Githup</p>
             </div>

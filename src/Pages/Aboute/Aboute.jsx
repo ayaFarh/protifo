@@ -15,13 +15,12 @@ import git from "../../assets/github.png"
 export default function Aboute(){
         Aos.init()
         return <>
-       <section className='py-20  dark:bg-gray-900 dark:text-white' id='Aboute'>
+       <section className='py-20  dark:bg-gray-900 dark:text-white overflow-x-hidden'   id='Aboute'>
         <div className='container'>
-
         <div className='' data-aos="fade-down">
           <div  className='grid  grid-cols-12 gap-5'>
-          <div className='col-span-12 md:col-span-5 lg:col-span-5 xl:col-span-5' data-aos="fade-right">
-            <img src={mesamico} className="rounded-xl w-[90%]" />
+          <div className='col-span-12 md:col-span-5 lg:col-span-5 xl:col-span-5' data-aos="fade-right" >
+            <img src={mesamico} className="rounded-xl w-[90%] object-contain h-[400px]" />
           </div>
       <div className='col-span-12 md:col-span-7 lg:col-span-7 xl:col-span-7 flex flex-col justify-center align-center border border-[7px] border-secondry rounded-bl-[90px] px-10 py-5 rounded-tr-[90px] px-5 shadow-2xl dark:border-darksecondry' data-aos="fade-left">
       <h3 className='text-3xl text-bold text-center mb-10 dark:text-darkprimary'>About Me</h3>

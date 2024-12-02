@@ -21,7 +21,7 @@ export default function Navbar() {
   }
   return <>
   <nav className='bg-secondry fixed top-0 left-0 right-0 z-10  z-20 shadow-xl dark:bg-darkprimary dark:text-light'>
-<div className='w-full  container '>
+<div className='w-full  container py-2'>
    <div className='md:flex block justify-between items-center'>
   <div className='flex items-center justify-between w-full'>
   <h1 className='cursor-pointer font-bold text-xl'>Aya Folio</h1>

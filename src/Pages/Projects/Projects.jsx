@@ -10,14 +10,14 @@ import todo  from "../../assets/to-do-ist.png"
 import weather  from "../../assets/weather.png"
 import contact  from "../../assets/contact list.png"
 import bookmark  from "../../assets/bookmark.png"
-
+import headphone  from "../../assets/Headphone - Google Chrome 12_2_2024 3_43_02 PM.png"
 
 
 export default function Projects() {
     Aos.init()
   
     return<>
-     <section className= "dark:bg-gray-900 dark:text-white py-20 text-center " id='Projects'>
+     <section className= "dark:bg-gray-900 dark:text-white py-10 text-center " id='Projects'>
   
      <div className='container'>
      <div   data-aos-easing="linear" data-aos-duration="1400" data-aos="fade-down">
@@ -39,6 +39,15 @@ export default function Projects() {
          <div className='p-5 flex flex-col justify-center'>
          <h3>Meals</h3>
          <a href="https://ayafarh.github.io/meals-project/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
+         </div>
+        </div>
+
+
+        <div className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'  >
+          <img src={headphone} alt=""  className='w-full h-[200px] object-fill '/>
+         <div className='p-5 flex flex-col justify-center'>
+         <h3>Headphone</h3>
+         <a href="https://head-phones-five.vercel.app/" className='btn-primary hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>
          </div>
         </div>
    

@@ -2,11 +2,9 @@ import React from 'react'
 
 export default function Footer() {
     return <>
-    <footer className='bg-secondry dark:bg-darkprimary dark:text-light  p-5 fixed bottom-0 right-0 left-0'>
+    <footer className='bg-secondry dark:bg-black dark:text-light  p-5 '>
       <div className='container flex justify-center items-center'>
- <p className='text-center '>Made with <span className='typewriter'>❤️</span> by Aya Farh</p>
- 
- 
+ <p className='text-center '>All rights reserved <span className='typewriter'>2024</span>  Aya Farh</p>
       </div>
     </footer>
    </>

@@ -8,12 +8,14 @@ import Home from './Pages/Home/Home'
 import Aboute from './Pages/Aboute/Aboute'
 import Projects from './Pages/Projects/Projects'
 import Contact from './Pages/Contact/Contact'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
  
 
   return (
     <>
+    <Toaster/>
      <Navbar/>
      <Home/>
      <Aboute/>

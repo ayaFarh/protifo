@@ -4,6 +4,9 @@ export default function Navbar() {
 
 
  let [isVisable,setisVisable] = useState(true)
+
+
+ 
   const toggleVisable = ()=>{
     setisVisable(!isVisable)
   }
@@ -20,12 +23,12 @@ export default function Navbar() {
     htmlElement.classList.toggle('dark') 
   }
   return <>
-  <nav className='bg-secondry fixed top-0 left-0 right-0 z-10  z-20 shadow-xl dark:bg-darkprimary dark:text-light'>
-<div className='w-full  container py-2'>
+  <nav className='bg-secondry fixed top-0 left-0 right-0   z-20 shadow-xl dark:bg-black/60 dark:text-light'>
+<div className='w-full  container py-1'>
    <div className='md:flex block justify-between items-center'>
   <div className='flex items-center justify-between w-full'>
   <h1 className='cursor-pointer font-bold text-xl'>Aya Folio</h1>
-  <i className="fa-solid fa-bars py-2 px-3 text-3xl  rounded-lg text-black cursor-pointer md:opacity-0 opacity-1 "   aria-label="Toggle Menu" onClick={toggleVisable}> </i>
+  <i className="fa-solid fa-bars py-2 px-3 text-3xl  rounded-lg text-white cursor-pointer md:opacity-0 opacity-1 "   aria-label="Toggle Menu" onClick={toggleVisable}> </i>
   </div>
    {isVisable && ( <ul className='md:flex block  items-center justify-center p-1'  onClick={toggleClass}>
         <li className='p-3 px-8' ><a href="#home"  className={({isActive})=>{return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]

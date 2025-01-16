@@ -55,7 +55,7 @@ export default function Projects() {
       {
         image: popit,
         title: "Popit",
-        link: "https://ayafarh.github.io/Popit/",},
+        link: "https://ayafarh.github.io/popit/"},
       {
         image: todo,
         title: "To Do List",

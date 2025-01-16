@@ -28,7 +28,7 @@ export default function Projects() {
       {
         image: foodapp,
         title: "Food App",
-        link: "https://ayafarh.github.io/foodapp/",},
+        link: "https://ayafarh.github.io/meals-project/",},
         {
           image: dotcode ,
           title: "Dot code",
@@ -47,7 +47,7 @@ export default function Projects() {
       {
         image: melafy,
         title: "Melafy",
-        link: "https://ayafarh.github.io/melafy/",},
+        link: "https://ayafarh.github.io/mealify/",},
       {
         image: mentor,  
         title: "Mentor",
@@ -63,19 +63,19 @@ export default function Projects() {
       {
         image: weather,
         title: "Weather App",
-        link: "https://ayafarh.github.io/Weather-App/",},
+        link: "https://ayafarh.github.io/weather/",},
       {
         image: contact,
         title: "Contact List",
-        link: "https://ayafarh.github.io/Contact-List/",},
+        link: "https://ayafarh.github.io/contact-list/",},
       {
         image: bookmark,
         title: "Bookmark",
-        link: "https://ayafarh.github.io/Bookmark/",},
+        link: "https://ayafarh.github.io/book-mark/",},
         {
           image: headphone,
           title: "Headphone",
-          link: "https://ayafarh.github.io/Headphone/", 
+          link: "https://head-phones-five.vercel.app/", 
         }
 
     ]

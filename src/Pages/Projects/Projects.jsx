@@ -14,6 +14,10 @@ import headphone  from "../../assets/Headphone - Google Chrome 12_2_2024 3_43_02
 import eslam from "../../assets/Eslam - Google Chrome 1_16_2025 2_39_19 PM.png"
 import  dotcode from "../../assets/DOTCODE.png"
 import fashion from "../../assets/fashion.png"
+import custommer from "../../assets/custommer.png"
+import party from "../../assets/party.png"
+import Dev from "../../assets/dev.png"
+import daniels from "../../assets/daniels.png"
 
 export default function Projects() {
 
@@ -40,6 +44,15 @@ export default function Projects() {
           link: "https://e-commerce-fashion-16.vercel.app/",
         },
         {
+          image: popit,
+          title: "Popit",
+          link: "https://ayafarh.github.io/popit/"},
+        {
+          image: headphone,
+          title: "Headphone",
+          link: "https://head-phones-five.vercel.app/", 
+        },
+        {
           image:eslam ,
           title: "protifolio",
           link: "https://eslam-fqng.vercel.app",
@@ -47,36 +60,48 @@ export default function Projects() {
       {
         image: melafy,
         title: "Melafy",
-        link: "https://ayafarh.github.io/mealify/",},
-      {
-        image: mentor,  
-        title: "Mentor",
-        link: "https://ayafarh.github.io/my-mentors/",},
-      {
-        image: popit,
-        title: "Popit",
-        link: "https://ayafarh.github.io/popit/"},
-      {
+        link: "https://ayafarh.github.io/mealify/"},
+       
+        {
         image: todo,
         title: "To Do List",
-        link: "https://ayafarh.github.io/to-do-list/",},
+        link: "https://ayafarh.github.io/to-do-list/"},
       {
         image: weather,
         title: "Weather App",
-        link: "https://ayafarh.github.io/weather/",},
+        link: "https://ayafarh.github.io/weather/"},
+        {
+          image: custommer,
+          title:"customers",
+          link: "https://ayafarh.github.io/customer-and-transaction/",
+        },
       {
         image: contact,
         title: "Contact List",
-        link: "https://ayafarh.github.io/contact-list/",},
+        link: "https://ayafarh.github.io/contact-list/"},
       {
         image: bookmark,
         title: "Bookmark",
-        link: "https://ayafarh.github.io/book-mark/",},
+        link: "https://ayafarh.github.io/book-mark/"},
         {
-          image: headphone,
-          title: "Headphone",
-          link: "https://head-phones-five.vercel.app/", 
-        }
+          image: mentor,  
+          title: "Mentor",
+          link: "https://ayafarh.github.io/my-mentors/"},
+          {
+            image:party ,  
+            title: "party",
+            link: "https://party-jm8ov18cv-ayafarhs-projects.vercel.app/"},
+            {
+              image: Dev ,  
+              title: "Dev",
+              link: "https://dev-phi-two.vercel.app/",
+            },
+            {
+              image: daniels ,  
+              title: "Daniels",
+              link: "https://daniels-six.vercel.app/",
+            }
+        
 
     ]
   
@@ -93,7 +118,7 @@ export default function Projects() {
      {projectDetails.map((project)=> {
        return(
         <div  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry' >
-        <img src={project.image} alt=""  className='w-full h-[200px] object-fill'/>
+        <img src={project.image} alt=""  className='w-full h-[200px] object-cover'/>
        <div className=' flex flex-col justify-center'>
        <h3 className='pt-2'>{project.title}</h3>
        <a href={project.link} className='btn-primary mt-5  w-1/3 py-4 m-auto rounded-t-3xl rounded-b-none hover:bg-red-300 hover:text-black transition-all duration-300 dark:bg-darksecondry'>View</a>

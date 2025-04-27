@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import freshcart from  "../../assets/freshcart.png"
@@ -25,6 +25,22 @@ export default function Projects() {
     Aos.init()
 
     const projectDetails = [
+
+      {
+        image: fashion ,
+        title: "fashion app with dashboard",
+        link: "https://style-club-fashion.vercel.app/",
+      },
+      {
+        image: dotcode ,
+        title: "Dot code",
+        link: "https://dot-code.vercel.app/",
+      },
+      {
+        image: headphone,
+        title: "Headphone",
+        link: "https://head-phones-five.vercel.app/", 
+      },
       {
         image: freshcart,
         title: "Freshcart",
@@ -33,25 +49,21 @@ export default function Projects() {
         image: foodapp,
         title: "Food App",
         link: "https://ayafarh.github.io/meals-project/",},
-        {
-          image: dotcode ,
-          title: "Dot code",
-          link: "https://dot-code.vercel.app/",
-        },
-        {
-          image: fashion ,
-          title: "fashion app",
-          link: "https://e-commerce-fashion-16.vercel.app/",
-        },
+       
+        
         {
           image: popit,
           title: "Popit",
           link: "https://ayafarh.github.io/popit/"},
-        {
-          image: headphone,
-          title: "Headphone",
-          link: "https://head-phones-five.vercel.app/", 
-        },
+          {
+            image: todo,
+            title: "To Do List",
+            link: "https://ayafarh.github.io/to-do-list/"},
+            {
+              image: bookmark,
+              title: "Bookmark",
+              link: "https://ayafarh.github.io/book-mark/"},
+        
         {
           image:eslam ,
           title: "protifolio",
@@ -62,11 +74,8 @@ export default function Projects() {
         title: "Melafy",
         link: "https://ayafarh.github.io/mealify/"},
        
+       
         {
-        image: todo,
-        title: "To Do List",
-        link: "https://ayafarh.github.io/to-do-list/"},
-      {
         image: weather,
         title: "Weather App",
         link: "https://ayafarh.github.io/weather/"},
@@ -79,10 +88,7 @@ export default function Projects() {
         image: contact,
         title: "Contact List",
         link: "https://ayafarh.github.io/contact-list/"},
-      {
-        image: bookmark,
-        title: "Bookmark",
-        link: "https://ayafarh.github.io/book-mark/"},
+      
         {
           image: mentor,  
           title: "Mentor",
@@ -115,9 +121,9 @@ export default function Projects() {
      </div>
   
       <div className='grid  grid-cols-12 gap-5'  data-aos="fade-down-right">
-     {projectDetails.map((project)=> {
+     {projectDetails.map((project,index)=> {
        return(
-        <div  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry' >
+        <div key={index}  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry' >
         <img src={project.image} alt=""  className='w-full h-[200px] object-cover'/>
        <div className=' flex flex-col justify-center'>
        <h3 className='pt-2'>{project.title}</h3>

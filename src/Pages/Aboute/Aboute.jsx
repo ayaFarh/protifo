@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import mesamico from "../../assets/messy bun-amico.svg"
@@ -13,6 +13,44 @@ import jquary from "../../assets/jquary.png"
 import git from "../../assets/github.png"
 
 export default function Aboute(){
+  const language=[
+    { name:"HTML & HTML5",
+    image:html,
+    },
+    { name:"CSS & CSS3",
+    image:css,
+    },
+    { name:"Javascript",
+    image:javascript,
+    },
+    { name:"React",
+    image:react,
+    },
+    { name:"Bootstrap",
+    image:bootstrap,
+    },
+    { name:"Tailwind",
+    image:tailwind,
+    },
+    { name:"Sass",
+    image:sass,
+    },
+    { name:"Jquary",
+    image:jquary,
+    },
+    {
+      name:"Redux toolkit",
+      image:"public/redux.png",
+    },
+    {
+      name:"Next js",
+      image:"public/next.webp",
+    },
+    { name:"Git hub",
+    image:git,
+  },
+
+]
         Aos.init()
         return <>
        <section className='py-20  dark:bg-gray-900 dark:text-white overflow-x-hidden'   id='Aboute'>
@@ -39,73 +77,16 @@ export default function Aboute(){
         <div className='my-10'>
           <h3 className='text-3xl text-bold text-center mb-10 dark:text-darkprimary'>Skills</h3>
           <div className='grid grid-cols-12 gap-5 ' data-aos="fade-down">
-            <div className='col-span-6 md:col-span-3   flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={html} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>HTML & HTML5</p>
-            </div>
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={css} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>CSS</p>
-            </div>
-      
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={javascript} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>JavaScript</p>
-            </div>
-      
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={bootstrap} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>Bootstrap</p>
-            </div>
-      
-      
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={tailwind} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>Tailwind</p>
-            </div>
-      
-       
-            <div className='col-span-6 md:col-span-3 flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={sass} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>Sass</p>
-            </div>
-      
-      
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={jquary} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>jquary</p>
-            </div>
-      
-      
-            <div className='col-span-6 md:col-span-3 flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={react} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>React js</p>
-            </div>
-      
-      
-            <div className='col-span-6 md:col-span-3  flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
-            <div className='rounded-full overflow-hidden'>
-              <img src={git} className='w-20 h-[70px] object-cover' />
-            </div>
-             <p className=' mt-5'>Githup</p>
-            </div>
-      
+            {language && (
+              language.map((lang, index) => (
+                <div key={index} className='col-span-6 md:col-span-3   flex flex-col justify-center items-center p-4 rounded-xl shadow-2xl border-2 border-primery hover:scale-105 transition-all duration-300 dark:border-darksecondry dark:shadow-darksecondry'>
+                <div className='rounded-full overflow-hidden'>
+                  <img src={lang.image} className='w-20 h-[70px] object-cover' />
+                </div>
+                 <p className=' mt-5'>{lang.name}</p>
+                </div>
+              
+            )))}
           </div>
       
       

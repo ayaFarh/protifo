@@ -11,6 +11,8 @@ import tailwind from "../../assets/tailwind.webp"
 import sass from "../../assets/sass.png"
 import jquary from "../../assets/jquary.png"
 import git from "../../assets/github.png"
+import next from "../../assets/next.webp"
+import redux from "../../assets/redux.png"
 
 export default function Aboute(){
   const language=[
@@ -40,11 +42,11 @@ export default function Aboute(){
     },
     {
       name:"Redux toolkit",
-      image:"public/redux.png",
+      image:redux,
     },
     {
       name:"Next js",
-      image:"public/next.webp",
+      image:next,
     },
     { name:"Git hub",
     image:git,

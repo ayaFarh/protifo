@@ -1,12 +1,13 @@
 
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import freshcart from  "../../assets/freshcart.png"
+import salla from '../../assets/Salla - Google Chrome 5_16_2025 11_25_33 PM.png'
 import foodapp from  "../../assets/meals.png"
 import melafy from "../../assets/melafy.png"
 import mentor from "../../assets/menator.png"
 import popit from "../../assets/popit.png"
 import todo  from "../../assets/to-do-ist.png"
+import Dashboard  from "../../assets/localhost_5174_dashboard (2).png"
 import weather  from "../../assets/weather.png"
 import contact  from "../../assets/contact list.png"
 import bookmark  from "../../assets/bookmark.png"
@@ -28,7 +29,7 @@ export default function Projects() {
 
       {
         image: fashion ,
-        title: "fashion app with dashboard",
+        title: "Style Club",
         link: "https://style-club-fashion.vercel.app/",
       },
       {
@@ -37,14 +38,20 @@ export default function Projects() {
         link: "https://dot-code.vercel.app/",
       },
       {
+        image: Dashboard,
+        title: "Dashboard",
+        link: "https://style-club-dashboard.vercel.app",
+      },
+      {
+        image: salla,
+        title: "Salla",
+        link: "https://salla-app-seven.vercel.app/",},
+      {
         image: headphone,
         title: "Headphone",
         link: "https://head-phones-five.vercel.app/", 
       },
-      {
-        image: freshcart,
-        title: "Freshcart",
-        link: "https://ayafarh.github.io/Freshcart/",},
+      
       {
         image: foodapp,
         title: "Food App",

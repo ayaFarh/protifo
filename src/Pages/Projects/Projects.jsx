@@ -19,6 +19,7 @@ import custommer from "../../assets/custommer.png"
 import party from "../../assets/party.png"
 import Dev from "../../assets/dev.png"
 import daniels from "../../assets/daniels.png"
+import telawa from "../../assets/Telawa - Google Chrome 8_5_2025 4_09_35 PM.png";
 
 export default function Projects() {
 
@@ -41,6 +42,11 @@ export default function Projects() {
         image: Dashboard,
         title: "Dashboard",
         link: "https://style-club-dashboard.vercel.app",
+      },
+      {
+        image: telawa,
+        title:"telawa",
+        link: "https://telawa-lac.vercel.app/",
       },
       {
         image: salla,
@@ -119,7 +125,7 @@ export default function Projects() {
     ]
   
     return<>
-     <section className= "dark:bg-gray-900 dark:text-white py-10 text-center " id='Projects'>
+     <section className= "dark:bg-gray-900 dark:text-white py-10 text-center " id='projects'>
   
      <div className='container'>
      <div   data-aos-easing="linear" data-aos-duration="1400" data-aos="fade-down">

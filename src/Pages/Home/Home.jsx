@@ -1,5 +1,4 @@
-import React from 'react';
-import { Typed } from 'react-typed';
+
 import ReactTypingEffect from 'react-typing-effect';
 
 export default function Home() {
@@ -15,12 +14,12 @@ export default function Home() {
             <span>Hi,I am  Aya farh</span>
            
           </h1>
-            <p className='mb-5 text-xl'>   <ReactTypingEffect
+            <div className='mb-5 text-xl'>   <ReactTypingEffect
               text={['Front-End Developer React js']}
               speed={100}
               eraseDelay={1000}
               typingDelay={100}
-            /></p>
+            /></div>
             <div className='flex gap-5 text-xl'>
               <a href="https://www.linkedin.com/in/aya-mohamed-farh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                 <i className="fa-brands fa-linkedin hover:text-primary transition-all duration-300"></i>
@@ -32,11 +31,6 @@ export default function Home() {
                 <i className="fa-brands fa-twitter hover:text-primary transition-all duration-300"></i>
               </a>
             </div>
-          </div>
-
-
-          <div>
-            <img src='' alt='' className=''/>
           </div>
         </div>
       </section>

@@ -55,7 +55,7 @@ export default function Aboute(){
 ]
         Aos.init()
         return <>
-       <section className='py-20  dark:bg-gray-900 dark:text-white overflow-x-hidden'   id='Aboute'>
+       <section className='py-20  dark:bg-gray-900 dark:text-white overflow-x-hidden'   id='aboute'>
         <div className='container'>
         <div className='' data-aos="fade-down">
           <div  className='grid  grid-cols-12 gap-5'>

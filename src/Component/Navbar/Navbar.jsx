@@ -1,76 +1,111 @@
-import React, { useState } from 'react'
+import { useEffect, useState, useCallback } from "react";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
+  const [isVisible, setIsVisible] = useState(false);
 
-  let [isVisable, setisVisable] = useState(true)
-
-  const toggleVisable = () => {
-    setisVisable(!isVisable)
-  }
-
-  const toggleClass = (e) => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 768 && (e.target.tagName === 'LI' || e.target.tagName === 'A')) {
-      setisVisable(!isVisable);
+  // Toggle nav visibility
+  const toggleVisible = useCallback(() => {
+    if (window.innerWidth < 768) {
+      setIsVisible((prev) => !prev);
     }
-  }
+  }, []);
 
-  function darkmoodclass() {
-    let htmlElement = document.documentElement;
-    htmlElement.classList.toggle('dark')
-  }
+  // Toggle dark mode
+  const toggleDarkMode = useCallback(() => {
+    document.documentElement.classList.toggle("dark");
+  }, []);
+
+  // Set initial visibility and handle resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsVisible(true);
+        document.body.style.overflowY = "auto";
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Lock scroll when menu is open on small screens
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      document.body.style.overflowY = isVisible ? "hidden" : "auto";
+    }
+    return () => {
+      document.body.style.overflowY = "auto"; // Cleanup
+    };
+  }, [isVisible]);
+
+  const navItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "aboute" },
+    { name: "Projects", id: "projects" },
+    { name: "Contact", id: "contact" },
+  ];
 
   return (
-    <>
-      <nav className='bg-secondry fixed top-0 left-0 right-0 z-20 shadow-xl dark:bg-black/60 dark:text-light'>
-        <div className='w-full container py-1'>
-          <div className='md:flex block justify-between items-center'>
-            <div className='flex items-center justify-between w-full'>
-              <h1 className='cursor-pointer font-bold text-xl'>Aya Folio</h1>
-              <i className="fa-solid fa-bars py-2 px-3 text-3xl rounded-lg text-white cursor-pointer md:opacity-0 opacity-1"
-                aria-label="Toggle Menu" onClick={toggleVisable}> </i>
-            </div>
-            {isVisable && (
-              <ul className='md:flex block items-center justify-center p-1' onClick={toggleClass}>
-                <li className='p-3 px-8'>
-                  <a href="#home" className={({ isActive }) => {
-                    return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
-                            hover:font-bold before:duration-300 dark:before:bg-black
-                            ${isActive ? 'font-bold before:w-full  dark:before:bg-black' : ""}`;
-                  }}>Home</a>
-                </li>
-                <li className='p-3 px-8'>
-                  <a href="#Aboute" className={({ isActive }) => {
-                    return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
-                            hover:font-bold before:duration-300 dark:before:bg-black
-                            ${isActive ? 'font-bold before:w-full dark:before:bg-black' : ""}`;
-                  }}>Aboute</a>
-                </li>
-                <li className='p-3 px-8'>
-                  <a href="#Projects" className={({ isActive }) => {
-                    return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
-                            hover:font-bold before:duration-300 dark:before:bg-black
-                            ${isActive ? 'font-bold before:w-full dark:before:bg-black' : ""}`;
-                  }}>Projects</a>
-                </li>
-                <li className='p-3 px-8'>
-                  <a href="#Contact" className={({ isActive }) => {
-                    return `before:h-[2px] before:bg-red-300 relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
-                            hover:font-bold before:duration-300 dark:before:bg-black
-                            ${isActive ? 'font-bold before:w-full dark:before:bg-black' : ""}`;
-                  }}>Contact</a>
-                </li>
+    <nav className="bg-secondry fixed top-0 left-0 right-0 z-20 shadow-xl  dark:bg-black dark:text-light">
+      <div className="w-full container py-1">
+        <div className="md:flex block justify-between items-center">
+          <div className="flex items-center justify-between w-full">
+            <h1 className="cursor-pointer font-bold text-xl">Aya Farh</h1>
 
-                <li>
-                  <button className='text-xl pl-10' onClick={darkmoodclass}>
-                    <i className="fa-regular fa-moon "></i>
-                  </button>
-                </li>
-              </ul>
-            )}
+            <i
+              className={`fa-solid ${isVisible ? "fa-xmark" : "fa-bars"} 
+                py-2 px-3 text-3xl rounded-lg text-white cursor-pointer 
+                md:opacity-0 opacity-100 transition-transform duration-300 ease-in-out transform 
+                ${isVisible ? "rotate-90" : "rotate-0"}`}
+              aria-label="Toggle Menu"
+              onClick={toggleVisible}
+            />
           </div>
+
+          <ul
+            className={`flex flex-col md:flex-row fixed md:static  right-0 bottom-0 top-[50px] 
+              dark:bg-black bg-secondry
+              md:items-center items-start justify-start md:justify-center p-1 
+              transition-all duration-300 ease-in-out transform
+              ${
+                isVisible
+                  ? "opacity-100 translate-y-0 pointer-events-auto "
+                  : "opacity-0 -translate-y-5 pointer-events-none"
+              }`}
+          >
+            {navItems.map((item) => (
+              <li className="p-3 px-8" key={item.id}>
+                <Link
+                  to={item.id}
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={800}
+                  className="cursor-pointer"
+                  activeClass="font-bold text-darksecondry"
+                  onClick={() => {
+                    if (window.innerWidth < 768) {
+                      setIsVisible(false);
+                    }
+                  }}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+
+            <li>
+              <button className="text-xl pl-10" onClick={toggleDarkMode}>
+                <i className="fa-regular fa-moon" />
+              </button>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </>
-  )
+      </div>
+    </nav>
+  );
 }

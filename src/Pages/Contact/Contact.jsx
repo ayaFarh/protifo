@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import  { useRef, useState } from 'react'
 import Lottie from 'lottie-react';
 import animationData from "../../../public/Animation - 1723139800218 (1).json"
 import Aos from 'aos';
@@ -43,7 +43,7 @@ export default function Contact() {
      
  
       return <>
-      <section className='dark:bg-gray-900 dark:text-white py-20  grid grid-cols-12 gap-5 ' id='Contact' >
+      <section className='dark:bg-gray-900 dark:text-white py-20  grid grid-cols-12 gap-5 ' id='contact' >
       <div className='container col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 ' >
            <div className='flex flex-col justify-center items-center '>
            <Lottie animationData={animationData}/>

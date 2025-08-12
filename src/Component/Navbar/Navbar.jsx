@@ -73,7 +73,7 @@ export default function Navbar() {
 
             <i
               className={`fa-solid ${isVisible ? "fa-xmark" : "fa-bars"} 
-                py-2 px-3 text-3xl rounded-lg text-white cursor-pointer 
+                py-2 px-3 text-3xl rounded-lg text-black dark:text-white cursor-pointer 
                 md:opacity-0 opacity-100 transition-transform duration-300 ease-in-out transform 
                 ${isVisible ? "rotate-90" : "rotate-0"}`}
               aria-label="Toggle Menu"

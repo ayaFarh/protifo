@@ -1,8 +1,22 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(false);
+  const navRef = useRef();
+
+  // Close nav on click outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsVisible(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   // Toggle nav visibility
   const toggleVisible = useCallback(() => {
@@ -27,6 +41,7 @@ export default function Navbar() {
       }
     };
 
+
     handleResize(); // Run on mount
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -50,7 +65,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-secondry fixed top-0 left-0 right-0 z-20 shadow-xl  dark:bg-black dark:text-light">
+    <nav className="bg-secondry fixed top-0 left-0 right-0 z-20 shadow-xl  dark:bg-black dark:text-light" ref={navRef}>
       <div className="w-full container py-1">
         <div className="md:flex block justify-between items-center">
           <div className="flex items-center justify-between w-full">
@@ -67,9 +82,9 @@ export default function Navbar() {
           </div>
 
           <ul
-            className={`flex flex-col md:flex-row fixed md:static  right-0 bottom-0 top-[50px] 
+            className={`flex flex-col md:flex-row w-[70%]   fixed md:static  right-0 bottom-0 top-[50px] 
               dark:bg-black bg-secondry
-              md:items-center items-start justify-start md:justify-center p-1 
+              md:items-center items-center text-2xl md:text-lg justify-center md:justify-end p-1 
               transition-all duration-300 ease-in-out transform
               ${
                 isVisible
@@ -88,8 +103,10 @@ export default function Navbar() {
                   className="cursor-pointer"
                   activeClass="font-bold text-darksecondry"
                   onClick={() => {
+                      
                     if (window.innerWidth < 768) {
                       setIsVisible(false);
+                      
                     }
                   }}
                 >
@@ -99,7 +116,7 @@ export default function Navbar() {
             ))}
 
             <li>
-              <button className="text-xl pl-10" onClick={toggleDarkMode}>
+              <button className="text-2xl cursor-pointer" onClick={toggleDarkMode}>
                 <i className="fa-regular fa-moon" />
               </button>
             </li>

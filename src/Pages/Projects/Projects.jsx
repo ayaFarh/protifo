@@ -20,6 +20,8 @@ import party from "../../assets/party.png"
 import Dev from "../../assets/dev.png"
 import daniels from "../../assets/daniels.png"
 import telawa from "../../assets/Telawa - Google Chrome 8_5_2025 4_09_35 PM.png";
+import qawafil from "../../assets/qawafil al sharq - Google Chrome 10_8_2025 9_46_24 PM.png";
+
 
 export default function Projects() {
 
@@ -48,6 +50,11 @@ export default function Projects() {
         title:"telawa",
         link: "https://telawa-lac.vercel.app/",
       },
+       {
+              image: qawafil ,  
+              title: "Qawafil",
+              link: "https://qawafil.netlify.app/",
+            },
       {
         image: salla,
         title: "Salla",
@@ -119,24 +126,25 @@ export default function Projects() {
               image: daniels ,  
               title: "Daniels",
               link: "https://daniels-six.vercel.app/",
-            }
+            },
+           
         
 
     ]
   
     return<>
-     <section className= "dark:bg-gray-900 dark:text-white py-10 text-center " id='projects'>
+     <section className= "dark:bg-gray-900 dark:text-white text-center " id='projects'>
   
      <div className='container'>
-     <div   data-aos-easing="linear" data-aos-duration="1400" data-aos="fade-down">
+     <div   data-aos-easing="linear" className='z-10' data-aos-duration="1400" data-aos="fade-down">
      <h1 className='font-bold text-3xl mb-5'>Projects</h1>
      <p className='mb-5'>Here are some of my projects</p>
      </div>
   
-      <div className='grid  grid-cols-12 gap-5'  data-aos="fade-down-right">
+      <div className='grid  grid-cols-12 gap-5' >
      {projectDetails.map((project,index)=> {
        return(
-        <div key={index}  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border-2 border-secondry shadow-2xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry' >
+        <div key={index}  className='col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border-2 border-secondry shadow-xl rounded overflow-hidden  hover:rotate-1 transition-all duration-300 dark:border-darkprimary dark:shadow-darksecondry'  data-aos="fade-down-right" >
         <img src={project.image} alt=""  className='w-full h-[200px] object-cover'/>
        <div className=' flex flex-col justify-center'>
        <h3 className='pt-2'>{project.title}</h3>

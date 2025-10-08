@@ -16,9 +16,11 @@ function App() {
     <Toaster/>
      <Navbar/>
      <Home/>
-     <Aboute/>
+     <div className='space-y-10 dark:bg-gray-900 bg-white'>
+      <Aboute/>
      <Projects/>
      <Contact/>
+     </div>
      <Footer/>
     </>
   )

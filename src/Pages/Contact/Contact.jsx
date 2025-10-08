@@ -43,7 +43,7 @@ export default function Contact() {
      
  
       return <>
-      <section className='dark:bg-gray-900 dark:text-white py-20  grid grid-cols-12 gap-5 ' id='contact' >
+      <section className='dark:bg-gray-900 dark:text-white py-10  grid grid-cols-12 gap-5 ' id='contact' >
       <div className='container col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 ' >
            <div className='flex flex-col justify-center items-center '>
            <Lottie animationData={animationData}/>
